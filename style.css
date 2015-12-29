@@ -1,0 +1,211 @@
+/*public*/
+* {
+	padding: 0;
+	margin: 0;
+}
+/*body {
+	padding: 20px;
+}*/
+figure {
+	position: relative;
+	width: 33.33%;
+	height: 350px;
+	overflow: hidden;
+	float: left;
+	background: #2f0000;
+
+}
+figcaption {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+figure img {
+	position: absolute;
+	opacity: 0.8;
+	transition: all 0.3s;
+}
+figure figcaption p{
+	padding: 3px;
+	font-family: "微软雅黑";
+	font-size: 12px;
+	text-align: center;
+}
+figure figcaption p,
+figure figcaption h2,
+figure figcaption .frame {
+	transition: all 0.3s;
+	
+}
+figure figcaption h2{
+	opacity: 0.5;
+}
+
+figure:hover figcaption h2 {
+	opacity: 1;
+}
+figure:hover img {
+	opacity: 0.5;
+}
+/*layout*/
+/*trans*/
+.trans figcaption {
+	bottom: 20%;
+	left: 15%;
+}
+.trans figcaption h2 {
+	color: #fff;
+	margin-bottom: 30px;
+}
+.trans figcaption p {
+	background: #fff;
+	margin-top: 5px;
+	transform: translate(-200px,0px);
+}
+.trans figcaption p:nth-of-type(1) {
+	transition-delay: 0.1s;
+}
+.trans figcaption p:nth-of-type(2) {
+	transition-delay: 0.2s;
+}
+.trans figcaption p:nth-of-type(3) {
+	transition-delay: 0.3s;
+}
+.trans:hover figcaption p {
+	transform: translate(0px,0px);
+	opacity: 0.8;
+}
+.trans:hover img {
+	transform:translate(-50px, 0px);
+}
+
+/*rotate*/
+.rotate figcaption {
+	width: 100%;
+	height: 100%;
+}
+.rotate figcaption p{
+	position: absolute;
+	width: 60%;
+	top: 30%;
+	left: 21%;
+	opacity: 0;
+	background: none;
+	transform:translate(0px, 50px);
+}
+.rotate figcaption h2{
+	position: absolute;
+	top: 15%;
+	left: 20%;
+}
+.rotate .frame{ 
+	width: 80%;
+	height: 80%;
+	border: 3px solid #fff;
+	margin: 5% auto;
+	transform:translate(0px, -350px) rotate(0deg);
+}
+.rotate:hover figcaption p {
+	transform:translate(0px, 0px);
+	opacity: 1;
+	color: #fff;
+	font-size: 14px;
+}
+.rotate:hover .frame {
+	transform:translate(0px, 0px) rotate(360deg);
+}
+.rotate:hover img {
+	transform:translate(-50px, 0px);
+}
+
+/*skew*/
+.skew figcaption {
+	bottom: 20%;
+	left: 10%;
+}
+.skew figcaption h2 {
+	margin-bottom: 25px;
+	transform: skew(90deg);
+}
+.skew figcaption p {
+	width: 200px;
+	color: #fff;
+	font-size: 14px;
+	transform: skew(90deg);
+}
+.skew:hover figcaption p,
+.skew:hover figcaption h2 {
+	transform: skew(0deg);
+}
+.skew:hover figcaption p {
+	transition-delay: 0.2s;
+}
+.skew:hover img {
+	transform:translate(-50px, 0px);
+}
+
+/*scale*/
+.scale figcaption {
+	width: 100%;
+	height: 100%;
+}
+.scale figcaption p{
+	position: absolute;
+	top: 30%;
+	left: 21%;
+	opacity: 0;
+	background: none;
+	transform:scale(1.2,1.2);
+}
+.scale figcaption h2{
+	position: absolute;
+	top: 15%;
+	left: 20%;
+	opacity: 0;
+	transform:scale(1.2,1.2);
+}
+.scale .frame{ 
+	width: 80%;
+	height: 80%;
+	border: 3px solid #fff;
+	margin: 5% auto;
+	transform: scale(1.2,1.2);
+	opacity: 0;
+}
+.scale img {
+	transform:scale(1,1);
+}
+.scale:hover figcaption p {
+	opacity: 1;
+	color: #fff;
+	font-size: 14px;
+	transform:scale(1,1);
+}
+.scale:hover figcaption h2 {
+	opacity: 1;
+	transform:scale(1,1);
+}
+.scale:hover .frame {
+	transform: scale(1,1);
+	opacity: 1;
+}
+.scale:hover img {
+	transform:scale(1.2,1.2);
+}
+
+/*media*/
+@media screen and (min-width: 1440px) {
+	.wrap {
+		width: 25%;
+	}
+}
+@media screen and (max-width: 800px) {
+	.wrap {
+		width: 50%;
+	}
+}
+@media screen and (max-width: 500px) {
+	.wrap {
+		width: 100%;
+	}
+}
